@@ -1,3 +1,5 @@
+package top.wangjf.generator.utils;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

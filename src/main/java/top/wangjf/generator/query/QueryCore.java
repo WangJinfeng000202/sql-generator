@@ -1,3 +1,7 @@
+package top.wangjf.generator.query;
+
+import top.wangjf.generator.utils.ToolUtils;
+
 import java.lang.reflect.Field;
 
 /**
@@ -8,7 +12,7 @@ public class QueryCore {
 
     /**
      * 左连接查询
-     * @param classes 传入的vo
+     * @param classes 传入要操纵的表对应的实体类
      * @return 左连接查询语句
      */
     public static String getLeftQuerySql(Class<?>... classes) {
@@ -39,7 +43,7 @@ public class QueryCore {
 
     /**
      * 自然连接查询
-     * @param classes 传入的Vo
+     * @param classes 传入要操纵的表对应的实体类
      * @return 自然连接查询
      */
     public static String getNaturalQuerySql(Class<?>... classes){

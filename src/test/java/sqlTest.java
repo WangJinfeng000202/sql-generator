@@ -1,4 +1,6 @@
 import org.junit.Test;
+import top.wangjf.generator.query.QueryCore;
+import top.wangjf.generator.update.UpdateCore;
 
 public class sqlTest {
 
@@ -20,6 +22,12 @@ public class sqlTest {
     @Test
     public void test4(){
         System.out.println(QueryCore.getNaturalQuerySql(Student.class,StudentTeacher.class, Teacher.class));
+    }
+
+    @Test
+    public void test5(){
+        Student student = new Student("123688", "你好");
+        System.out.println(UpdateCore.update(student));
     }
 
 }

@@ -15,7 +15,7 @@ public static String getQuerySql(Class<?>... classes);
 ```
 *使用*
 ```java
-    //待查询类
+    import top.wangjf.generator.query.QueryCore;//待查询类
     public class Student {
         private String studentId;
         private String studentName;
