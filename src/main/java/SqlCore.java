@@ -1,16 +1,17 @@
 import java.lang.reflect.Field;
 
 public class SqlCore {
-    public static String getQuerySql(Class<?> clazz) {
+    public static String getSimpleQuerySql(Class<?> clazz) {
         String simpleTable = simplify(clazz.getSimpleName());
-        return "select " + getField(clazz.getDeclaredFields()) + " from " + ToolUtils.humpToLine(clazz.getSimpleName()) + " " + simpleTable + "\n";
+        return "select " + getField(clazz.getDeclaredFields())
+                + " from " + ToolUtils.humpToLine(clazz.getSimpleName()) + " " + simpleTable + "\n";
     }
 
-    public static String getQuerySql(Class<?>... classes) {
+    public static String getSimpleQuerySql(Class<?>... classes) {
         StringBuilder builder = new StringBuilder();
 
         for (Class<?> clazz : classes) {
-            builder.append(getQuerySql(clazz));
+            builder.append(getSimpleQuerySql(clazz));
         }
 
         return builder.toString();
