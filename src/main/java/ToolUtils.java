@@ -3,6 +3,7 @@ import java.util.regex.Pattern;
 
 /**
  *驼峰下划线相互转化
+ * @author 王金锋
  */
 public class ToolUtils {
     private static final Pattern linePattern = Pattern.compile("_(\\w)");
@@ -35,6 +36,9 @@ public class ToolUtils {
             matcher.appendReplacement(sb, "_" + matcher.group(0).toLowerCase());
         }
         matcher.appendTail(sb);
+        if ((sb.charAt(0)+"") .equals("_") ){
+            sb.deleteCharAt(0);
+        }
         return sb.toString();
     }
 

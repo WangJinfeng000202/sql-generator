@@ -24,7 +24,7 @@ public static String getQuerySql(Class<?>... classes);
     //单元测试
     @Test
     public void test1(){
-        System.out.println(SqlCore.getQuerySql(Student.class));
+        System.out.println(QueryCore.getQuerySql(Student.class));
     }
 ```
 
